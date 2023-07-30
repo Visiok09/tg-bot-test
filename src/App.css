@@ -4,5 +4,5 @@
   box-sizing: border-box;
 }
 body {
-  background-color: wheat;
+  background-color: var(--tg-color-scheme);
 }
