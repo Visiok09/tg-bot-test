@@ -1,8 +1,8 @@
 import React from 'react';
-import './Button.css';
+import Style from './Button.module.css';
 
 const Button = (props) => {
-  return <button {...props} className={'button' + props.className} />;
+  return <button {...props} className={Style.button} />;
 };
 
 export default Button;
