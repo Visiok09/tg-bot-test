@@ -55,11 +55,25 @@ const Form = () => {
   }, [user, tg]);
 
   const handleChange = (event) => {
-    const { name, value } = event.target;
-    setUser((prevUser) => ({
-      ...prevUser,
-      [name]: value,
-    }));
+    const { name, city, country, value } = event.target;
+    if (event.target.value == user.name) {
+      setUser((prevUser) => ({
+        ...prevUser,
+        [name]: value,
+      }));
+    }
+    if (event.taget.value == user.city) {
+      setUser((prevUser) => ({
+        ...prevUser,
+        [city]: value,
+      }));
+    }
+    if (event.taget.value == user.country) {
+      setUser((prevUser) => ({
+        ...prevUser,
+        [country]: value,
+      }));
+    }
   };
   const handleChangeCountry = (event) => {
     setSelectedCountry(event.target.value);
